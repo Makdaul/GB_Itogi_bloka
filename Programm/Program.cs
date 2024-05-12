@@ -7,15 +7,15 @@ class Program
         Console.InputEncoding = System.Text.Encoding.GetEncoding("utf-16");
         System.Console.WriteLine("Введите строки через пробел:");
         string input = Console.ReadLine();
-        string[] originalArray = input.Split(' ');
-        string[] newArray = CreateArrayMaxThreeChars(originalArray);
+        string[] FerstArray = input.Split(' ');
+        string[] newArray = ArrayThreeChars(FerstArray);
 
-        string[] CreateArrayMaxThreeChars(string[] array) //Функция создания нового массива где элементы не длиннее 3 символов
+        string[] ArrayThreeChars(string[] array) //Функция создания нового массива где элементы не длиннее 3 символов
         {
-            string[] newArray = new string[originalArray.Length];
+            string[] newArray = new string[FerstArray.Length];
             int newIndex = 0;
 
-            foreach (string str in originalArray)
+            foreach (string str in FerstArray)
             {
                 if (str.Length <= 3)
                 {
